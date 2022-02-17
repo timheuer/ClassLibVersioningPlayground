@@ -1,0 +1,19 @@
+name: "Setup SDK, Restore, Build, Test"
+description: "Sets up .NET SDK, runs build, restore, test"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1.9.0
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test
