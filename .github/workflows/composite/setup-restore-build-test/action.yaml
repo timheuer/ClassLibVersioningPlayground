@@ -1,8 +1,6 @@
 name: "Setup SDK, Restore, Build, Test"
 description: "Sets up .NET SDK, runs build, restore, test"
-defaults:
-  run:
-    shell: pwsh
+
 runs:
   using: "composite"
   steps:
@@ -13,9 +11,12 @@ runs:
 
     - name: Restore
       run: dotnet restore
+      shell: pwsh
 
     - name: Build
       run: dotnet build --configuration Release --no-restore
+      shell: pwsh
 
     - name: Test
       run: dotnet test
+      shell: pwsh
