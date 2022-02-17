@@ -14,7 +14,7 @@ runs:
       shell: pwsh
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore -o finalbuilt
       shell: pwsh
 
     - name: Test
