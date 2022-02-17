@@ -42,7 +42,7 @@ jobs:
         fetch-depth: 0
 
     - name: Setup, restore, build, test
-      uses: ./.github/workflows/composite/build-restore-test.yaml
+      uses: ./.github/workflows/composite/setup-restore-build-test
 
     - name: Publish signed artifact
       uses: actions/upload-artifact@v2
