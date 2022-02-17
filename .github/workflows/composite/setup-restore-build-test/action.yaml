@@ -1,6 +1,8 @@
 name: "Setup SDK, Restore, Build, Test"
 description: "Sets up .NET SDK, runs build, restore, test"
-
+defaults:
+  run:
+    shell: pwsh
 runs:
   using: "composite"
   steps:
