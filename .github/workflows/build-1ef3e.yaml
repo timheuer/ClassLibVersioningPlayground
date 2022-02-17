@@ -49,7 +49,7 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore -o ../finalbuilt
+      run: dotnet build --configuration Release --no-restore -o finalbuilt
 
     - name: Test
       run: dotnet test
